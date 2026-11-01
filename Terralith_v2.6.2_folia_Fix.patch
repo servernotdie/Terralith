@@ -1,7 +1,7 @@
 Remove function load tag for Folia 26.1.2 compatibility
 Folia removed the /function command, so function tags are useless.
 
---- a/data/minecraft/tags/function/load.json
+--- data/minecraft/tags/function/load.json
 +++ /dev/null
 @@ -1,8 +0,0 @@
 -{
@@ -12,11 +12,11 @@ Folia removed the /function command, so function tags are useless.
 -    }
 -  ]
 -}
---- a/data/terralith/function/rtp_testing.mcfunction
+--- data/terralith/function/rtp_testing.mcfunction
 +++ /dev/null
 @@ -1 +0,0 @@
 -spreadplayers 0 0 1000000 1000000 under 128 false @s
---- a/data/terralith/function/setup.mcfunction
+--- data/terralith/function/setup.mcfunction
 +++ /dev/null
 @@ -1,6 +0,0 @@
 -# Init scoreboards
@@ -25,7 +25,7 @@ Folia removed the /function command, so function tags are useless.
 -# Do the toast
 -execute unless score %USED tr.first matches 2.. run schedule function terralith:toast 20t
 -scoreboard players set %USED tr.first 2
---- a/data/terralith/function/toast.mcfunction
+--- data/terralith/function/toast.mcfunction
 +++ /dev/null
 @@ -1 +0,0 @@
 -tellraw @a ["",{"text":"Hello, thank you for downloading ","color":"#E1B8F7"},{"text":"Terralith","bold":true,"color":"#1eb2bc"},{"text":"!","color":"#E1B8F7"},{"text":"\n\n- "},{"text":"Warning:","bold":true,"color":"#c21742"},{"text":" you ","color":"#E1B8F7"},{"text":"CANNOT","bold":true,"color":"#c21742"},{"text":" cleanly uninstall Terralith - things will break!","color":"#E1B8F7"},{"text":"\n- "},{"text":"Terralith Discord","underlined":true,"color":"#5865F2","click_event":{"action":"open_url","url":"https://discord.gg/stardustlabs"}},{"text":" (Stardust Labs)","color":"#E1B8F7"},{"text":"\n- "},{"text":"Disable this message","underlined":true,"color":"#1bd96a","click_event":{"action":"open_url","url":"https://modrinth.com/datapack/remove-terralith-intro-message"}},{"text":" (mod/datapack)","color":"#E1B8F7"},{"text":"\n "}]
